@@ -1,6 +1,6 @@
-package com.nxmark.fuel_consumption.activity;
+package com.fuel_consumption.activity;
 
-import com.nxmark.fuel_consumption.R;
+import com.fuel_consumption.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,9 @@ import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class Main extends Activity {
+	
+	private static final String TAG = "Main";
 	
 	Button record;
 	
@@ -24,7 +26,6 @@ public class MainActivity extends Activity {
 		initClickListener();
 	}
 	
-
 	private void initUI(){
 		record = (Button) findViewById(R.id.record);
 	}
@@ -35,12 +36,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(MainActivity.this, RecordActivity.class);
+				Intent intent = new Intent(Main.this, Record.class);
 				startActivity(intent);
 				
 			}
-		});
-		
+		});		
 	}
-
 }

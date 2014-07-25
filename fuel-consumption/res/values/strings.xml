@@ -2,5 +2,19 @@
 
     <string name="app_name">油耗记录</string>
     <string name="record">记一笔</string>
-
+    <string name="totalprice">支付金额</string>
+    <string name="inputtotalprice">本次加油花费</string>
+    <string name="unitprice">燃油价格</string>
+    <string name="inputunitprice">每升燃油价格</string>
+    <string name="disamount">0.00</string>
+    <string name="save">保存</string>
+    <string name="back">返回</string>
+    <string name="newrecond">新增记录</string>
+    <string name="amount">加油量</string>
+    <string name="range">行车里程</string>
+    <string name="rangehint">里程表读数</string>
+    <string name="isempty">燃油报警</string>
+    <string name="isfull">是否加满</string>
+    <string name="date">日期</string>
+    <string name="remark">请填写备注信息(可选)</string>
 </resources>
