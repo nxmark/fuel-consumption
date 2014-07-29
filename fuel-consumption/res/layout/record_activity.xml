@@ -6,13 +6,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:focusableInTouchMode="true"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:focusableInTouchMode="true" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_record_header"
             android:orientation="horizontal" >
 
             <Button
@@ -39,8 +38,6 @@
                 android:text="@string/save" />
         </LinearLayout>
 
-      
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
@@ -50,21 +47,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="24dp"
                 android:text="@string/range"
-                android:textSize="12sp" />
+                android:textSize="14sp" />
 
-            <com.fuel_consumption.widget.RecordEditText
+            <EditText
                 android:id="@+id/inputrange"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="bottom"
                 android:background="@drawable/bg_record_edittext"
                 android:cursorVisible="true"
+                android:gravity="right"
+                android:maxLength="15"
                 android:hint="@string/rangehint"
                 android:inputType="numberDecimal"
-                android:textSize="20sp" >
-            </com.fuel_consumption.widget.RecordEditText>
+                android:textSize="18sp" />
         </FrameLayout>
 
         <FrameLayout
@@ -78,19 +75,19 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="24dp"
                 android:text="@string/totalprice"
-                android:textSize="13sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/inputtotalprice"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_record_edittext"
                 android:cursorVisible="true"
                 android:gravity="right"
+                android:maxLength="15"
                 android:hint="@string/inputtotalprice"
                 android:inputType="numberDecimal"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </FrameLayout>
 
         <FrameLayout
@@ -104,67 +101,49 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="24dp"
                 android:text="@string/unitprice"
-                android:textSize="13sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/inputunitprice"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_record_edittext"
                 android:cursorVisible="true"
                 android:gravity="right"
+                android:maxLength="15"
                 android:hint="@string/inputunitprice"
                 android:inputType="numberDecimal"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal" >
 
-            <FrameLayout
+            <EditText
+                android:id="@+id/disamount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@drawable/bg_record_disamount_edittext"
+                android:editable="false"
+                android:focusable="false"
+                android:text="@string/disamount"
+                android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="24dp"
-                    android:text="@string/amount"
-                    android:textSize="13sp" />
-
-                <EditText
-                    android:id="@+id/disamount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:editable="false"
-                    android:focusable="false"
-                    android:gravity="right"
-                    android:hint="@string/disamount"
-                    android:textSize="14sp" />
-            </FrameLayout>
-
-            <FrameLayout
+            <EditText
+                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <EditText
-                    android:id="@+id/date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="12dp"
-                    android:editable="false"
-                    android:gravity="center"
-                    android:hint="@string/date"
-                    android:textSize="14sp" />
-            </FrameLayout>
+                android:layout_weight="1"
+                android:background="@drawable/bg_record_date_edittext"
+                android:editable="false"
+                android:gravity="right"
+                android:hint="@string/date"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -223,5 +202,14 @@
         android:layout_gravity="bottom|center"
         android:visibility="gone" >
     </com.fuel_consumption.widget.DateTimePicker>
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+    </android.inputmethodservice.KeyboardView>
 
 </FrameLayout>
