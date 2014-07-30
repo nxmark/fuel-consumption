@@ -2,6 +2,7 @@ package com.fuel_consumption.activity;
 
 import com.fuel_consumption.R;
 import com.fuel_consumption.db.DbHelper;
+import com.fuel_consumption.widget.MyCursorAdapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
@@ -154,6 +157,10 @@ public class Main extends Activity {
 				final LinearLayout afterlongpress = (LinearLayout) arg1.findViewById(R.id.afterlongpress);
 				final int id = (int) arg3;
 				afterlongpress.setVisibility(View.VISIBLE);
+				Animation datetiminAnimation = AnimationUtils
+						.loadAnimation(Main.this,
+								R.anim.list_view_item_longpress);
+				afterlongpress.startAnimation(datetiminAnimation);
 				afterlongpress.setOnClickListener(new OnClickListener() {		
 					@Override
 					public void onClick(View v) {

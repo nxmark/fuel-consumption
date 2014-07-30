@@ -29,7 +29,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 abstract class RecordActivity extends Activity {
@@ -60,6 +59,7 @@ abstract class RecordActivity extends Activity {
 	SimpleDateFormat df;
 	protected InputMethodManager imm;
 
+	@SuppressLint("SimpleDateFormat")
 	private void initUI() {
 		confirm = (Button) findViewById(R.id.confirm);
 		back = (Button) findViewById(R.id.back);
